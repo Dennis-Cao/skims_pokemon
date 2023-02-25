@@ -126,3 +126,9 @@ The lambda code in simple english does the following:
 A thing to note in the python lambda code:
 
 - User-Agent header change: Browsing the code, you may notice a peculiar line `base_req.add_header('User-Agent', 'cheese')`. This is needed because attempting to scrape the pokeapi endpoint with the default python user agent gave me 403 errors. A google search of the problem led me to this comment: https://github.com/PokeAPI/pokeapi/issues/135#issuecomment-198256744 in which user "martinpeck" provides the workaround of altering the user agent.
+
+## Potential Improvement
+
+The primary drawback of the lambda as currently implemented is its reliance on a series of 10 api calls (2 for each favorite pokemon) to the pokeapi - resulting in very long compute durations. An improvement I would make (potentially out of scope) would be to scrape the pokeapi, and then store the attributes for each pokemon in a nosql database such as DynamoDB. Then, the lambda function could query the DynamoDB table rather than the third party endpoint, resulting in much quicker execution and thus large cost savings. 
+
+The DynamoDB table could be kept up to date on a regular schedule via running the scraper on a cronjob or as a scheduled lambda.
