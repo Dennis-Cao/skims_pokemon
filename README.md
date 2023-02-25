@@ -42,14 +42,23 @@ To get started, follow these steps. Note that all AWS resources will be created 
 
 The project is structured as follows:
 `.` 
+
 ` ├── README.md ` 
+
 ` ├── mvp_solution`
+
  ` │   ├── pokemon_lambda.py` 
+ 
  ` ├── templates`
+ 
  ` │   ├── lambda`
+ 
  ` │   |  ├── pokemon_lambda.py`
+ 
 ` ├── main.tf` 
+
 ` ├── outputs.tf` 
+
 ` ├── variables.tf` 
 
 The `mvp_solution` directory contains the "Minimum Viable Product" for this assignment - the raw Python code for the AWS Lambda function that retrieves data from the PokeAPI.
