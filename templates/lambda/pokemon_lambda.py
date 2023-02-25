@@ -25,6 +25,7 @@ def lambda_handler(event, context):
         with urllib.request.urlopen(species_req) as species_response:
             species_data = json.loads(species_response.read().decode())
 
+        # Create a map of all requested attributes, and add it to the results map
         attributes = {
             "name": base_data["name"],
             "height": base_data["height"],
