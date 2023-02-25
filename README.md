@@ -1,7 +1,7 @@
 
-# Displaying attributes of favorite Pokemons using AWS Lambda and API Gateway
+# Displaying attributes of favorite Pokemon using AWS Lambda and API Gateway
 
-This project demonstrates how to use AWS Lambda and API Gateway to display the attributes of my five favorite Pokemons using public data from [https://pokeapi.co/](https://pokeapi.co/).
+This project demonstrates how to use AWS Lambda and API Gateway to display the attributes of my five favorite Pokemon using public data from [https://pokeapi.co/](https://pokeapi.co/).
 
 The project consists of two parts: the AWS Lambda function and the API Gateway. The Lambda function is written in Python and retrieves data from the PokeAPI. The API Gateway provides a RESTful API endpoint that can be used to retrieve the Pokemon attributes.
 
